@@ -13,7 +13,7 @@ import NotFound from './pages/NotFound.jsx';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/amrutha-passport-consultancy">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
