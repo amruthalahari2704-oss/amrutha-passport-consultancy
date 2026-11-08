@@ -1,16 +1,162 @@
-# React + Vite
+# Passport Consultancy Management System (PCMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+The **Passport Consultancy Management System (PCMS)** is a web-based application designed to simplify and manage passport consultancy services. It helps customers access passport-related guidance, check required documents, book consultations, and track their consultation requests.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The system also provides an admin dashboard to manage customer details, view consultation bookings, update request statuses, and organize customer follow-ups.
 
-## React Compiler
+The main objective is to reduce manual work, improve customer communication, and make passport consultancy management more efficient.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##LiveDemo
+https://amruthalahari2704-oss.github.io/amrutha-passport-consultancy/
 
-## Expanding the Oxlint configuration
+## Objectives
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Provide passport-related consultancy guidance.
+- Display document checklists for different passport services.
+- Allow customers to book consultations online.
+- Help customers track their consultation requests.
+- Provide an admin dashboard to manage customer bookings.
+- Reduce manual record maintenance and improve efficiency.
+
+## Features
+
+### Customer Module
+- Home page with consultancy information.
+- Passport consultancy services.
+- Document checklist.
+- Application guidance.
+- Online consultation booking.
+- Consultation request tracking.
+- Contact and about pages.
+
+### Admin Module
+- Admin login.
+- View consultation requests.
+- Manage customer booking details.
+- Update consultation request statuses.
+- Organize customer follow-ups.
+
+## Technologies Used
+
+| Component | Technology |
+|---|---|
+| Frontend | React.js, JavaScript |
+| Styling | HTML, CSS |
+| Build Tool | Vite |
+| Backend | Node.js, Express.js |
+| Database | MongoDB |
+| ODM | Mongoose |
+| Authentication | JWT, bcryptjs |
+| Version Control | Git and GitHub |
+
+## Project Structure
+
+```text
+Passport-Consultancy-Management-System/
+│
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── server.js
+│   └── package.json
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── public/
+├── docs/
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## Installation and Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/amruthalahari2704-oss/amrutha-passport-consultancy.git
+```
+
+### 2. Open the Project Folder
+
+```bash
+cd amrutha-passport-consultancy
+```
+
+### 3. Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the Frontend
+
+```bash
+npm run dev
+```
+
+Frontend runs at:
+
+```text
+http://localhost:5173
+```
+
+### 5. Install Backend Dependencies
+
+Open another terminal:
+
+```bash
+cd backend
+npm install
+```
+
+Configure the required environment variables in `backend/.env` according to the backend configuration.
+
+### 6. Start the Backend
+
+```bash
+npm run dev
+```
+
+Backend runs at:
+
+```text
+http://localhost:5000
+```
+
+## Database
+
+The application uses MongoDB to store consultation details and related information. Mongoose is used to interact with the database.
+
+## Future Enhancements
+
+- Email and SMS notifications.
+- Online payment integration.
+- Advanced customer tracking.
+- Appointment reminders.
+- Improved admin reports and analytics.
+
+## Important Disclaimer
+
+This is a private passport consultancy assistance system. It is not affiliated with the Government of India. It does not issue passports, make passport approval decisions, or guarantee passport approval.
+
+## Author
+
+**Puthi Amrutha Lahari**  
+**Roll Number:** 24761A0547  
+**Course:** B.Tech – Computer Science and Engineering  
+**Project:** Full Stack Development (FSD-II)
+
+## License
+
+This project is developed for academic purposes.
+
