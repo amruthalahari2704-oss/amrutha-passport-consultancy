@@ -8,8 +8,11 @@ The system also provides an admin dashboard to manage customer details, view con
 
 The main objective is to reduce manual work, improve customer communication, and make passport consultancy management more efficient.
 
-##LiveDemo
+## Live Demo
+
+```bash
 https://amruthalahari2704-oss.github.io/amrutha-passport-consultancy/
+```
 
 ## Objectives
 
