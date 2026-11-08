@@ -1,0 +1,108 @@
+/* Colourful Passport Consultancy Service Cards */
+
+.service-card {
+  background: #fffaf0;
+  border: 1px solid #f0dfbd;
+  border-top: 5px solid #f59e0b;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 5px 16px rgba(20, 40, 70, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:nth-child(6n + 2) {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  border-top-color: #2563eb;
+}
+
+.service-card:nth-child(6n + 3) {
+  background: #fdf0f3;
+  border-color: #fbcfe8;
+  border-top-color: #db2777;
+}
+
+.service-card:nth-child(6n + 4) {
+  background: #ecfdf5;
+  border-color: #bbf7d0;
+  border-top-color: #16a34a;
+}
+
+.service-card:nth-child(6n + 5) {
+  background: #f5f0ff;
+  border-color: #ddd6fe;
+  border-top-color: #7c3aed;
+}
+
+.service-card:nth-child(6n + 6) {
+  background: #fff1e8;
+  border-color: #fed7aa;
+  border-top-color: #ea580c;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(20, 40, 70, 0.13);
+}
+
+.service-card h2 {
+  color: #102b50;
+}
+
+.service-card h3 {
+  color: #34445a;
+}
+
+.service-card p {
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .service-card {
+    padding: 18px;
+  }
+}
+/* Fresh Passport Card - Saffron */
+.service-card.fresh-passport-card {
+  background: linear-gradient(135deg, #fff4d6, #ffe5ad);
+  border: 1px solid #f5d28b;
+  border-top: 5px solid #f28c00;
+}
+
+/* Tatkaal Passport Card - Blue */
+.service-card.tatkaal-passport-card {
+  background: linear-gradient(135deg, #e5f2ff, #cce4ff);
+  border: 1px solid #a9d0fa;
+  border-top: 5px solid #1769aa;
+}
+
+/* Hover effects */
+.service-card.fresh-passport-card:hover,
+.service-card.tatkaal-passport-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(20, 40, 70, 0.15);
+}
+/* Fresh Passport Card */
+.fresh-passport-card {
+  background: linear-gradient(135deg, #fff4d6, #ffe5ad);
+  border: 1px solid #f5d28b;
+  border-top: 5px solid #f28c00;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Tatkaal Passport Card */
+.tatkaal-passport-card {
+  background: linear-gradient(135deg, #e5f2ff, #cce4ff);
+  border: 1px solid #a9d0fa;
+  border-top: 5px solid #1769aa;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.fresh-passport-card:hover,
+.tatkaal-passport-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(20, 40, 70, 0.15);
+}

@@ -1,0 +1,172 @@
+/* Styles for Document Checklist & Print View */
+
+.checklist-progress-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.checklist-progress-bar-bg {
+  width: 100%;
+  height: 10px;
+  background: var(--bg-alt);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin: 12px 0 8px;
+}
+
+.checklist-progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--navy-blue) 0%, var(--accent-saffron) 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+.checklist-filter-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.checklist-item-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-subtle);
+  background: #FFFFFF;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.checklist-item-card:hover {
+  border-color: rgba(19, 62, 135, 0.3);
+  background: var(--bg-main);
+}
+
+.checklist-item-card.checked {
+  background: var(--navy-soft);
+  border-color: var(--navy-blue);
+}
+
+.checklist-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  accent-color: var(--accent-saffron);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checklist-item-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.checklist-item-card.checked .checklist-item-title {
+  color: var(--primary-navy);
+  font-weight: 700;
+}
+
+.checklist-item-desc {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.print-only-header {
+  display: none;
+}
+
+/* ==========================================================
+   Print-Friendly Layout (@media print)
+   ========================================================== */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+
+  /* Hide navigation, banner, actions, and footer when printing */
+  .disclaimer-banner,
+  .navbar-header,
+  .footer-wrapper,
+  .no-print,
+  .checklist-filter-pills,
+  .btn,
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+
+  .main-content {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .section {
+    padding: 0 !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print-only-header {
+    display: block !important;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .print-only-header h1 {
+    font-size: 16pt !important;
+    color: #000000 !important;
+    margin-bottom: 4px;
+  }
+
+  .print-only-header p {
+    font-size: 9pt !important;
+    color: #444444 !important;
+  }
+
+  .card, .checklist-progress-card {
+    border: 1px solid #CCCCCC !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    padding: 12px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .checklist-item-card {
+    border: 1px solid #DDDDDD !important;
+    background: #FFFFFF !important;
+    padding: 8px 12px !important;
+    margin-bottom: 8px !important;
+    page-break-inside: avoid;
+  }
+
+  .checklist-checkbox {
+    border: 1px solid #000000 !important;
+  }
+
+  .print-footer-notice {
+    display: block !important;
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #CCCCCC;
+    font-size: 8.5pt !important;
+    color: #555555 !important;
+  }
+}

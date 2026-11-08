@@ -1,0 +1,493 @@
+/* Home Page Specific Styling */
+
+/* Hero Section */
+.hero-wrapper {
+  background: radial-gradient(circle at 80% 20%, rgba(19, 62, 135, 0.4) 0%, rgba(11, 37, 69, 1) 70%);
+  color: #FFFFFF;
+  padding: 60px 0 80px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--accent-saffron);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+  }
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(234, 88, 12, 0.15);
+  border: 1px solid rgba(234, 88, 12, 0.4);
+  color: #FDBA74;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.825rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-heading {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.hero-heading span.highlight {
+  color: #FDBA74;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-desc {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: #CBD5E1;
+  line-height: 1.65;
+  margin-bottom: 32px;
+  max-width: 600px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.hero-trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 24px;
+}
+
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #E2E8F0;
+}
+
+.hero-trust-item svg {
+  color: var(--accent-saffron);
+}
+
+/* Passport Visual Showcase Container */
+.passport-visual-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.passport-card-stack {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  perspective: 1000px;
+}
+
+/* The Passport Book Card */
+.passport-book {
+  background: linear-gradient(135deg, #07192F 0%, #0B2545 60%, #133E87 100%);
+  border: 2px solid rgba(245, 158, 11, 0.4);
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.4);
+  color: #F59E0B;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.passport-book:hover {
+  transform: translateY(-5px);
+}
+
+.passport-book::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 16px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(0, 0, 0, 0.3) 100%);
+  border-right: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.passport-gold-header {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FBBF24;
+  margin-bottom: 4px;
+}
+
+.passport-gold-sub {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #FDE68A;
+  margin-bottom: 24px;
+}
+
+.passport-emblem-wrap {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 24px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px dashed rgba(245, 158, 11, 0.4);
+  color: #F59E0B;
+}
+
+.passport-gold-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #FBBF24;
+  margin-bottom: 4px;
+}
+
+.passport-gold-footer {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #CBD5E1;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+/* Floating Badges on top of Passport */
+.floating-badge {
+  position: absolute;
+  background: #FFFFFF;
+  color: var(--primary-navy);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  font-size: 0.825rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+  animation: floatBadge 4s ease-in-out infinite alternate;
+}
+
+.floating-badge.badge-top-left {
+  top: -16px;
+  left: -20px;
+  border-left: 4px solid var(--success-green);
+}
+
+.floating-badge.badge-bottom-right {
+  bottom: -20px;
+  right: -20px;
+  border-left: 4px solid var(--accent-saffron);
+  animation-delay: -2s;
+}
+
+@keyframes floatBadge {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-8px); }
+}
+
+@media (max-width: 600px) {
+  .floating-badge.badge-top-left {
+    left: 4px;
+    top: -12px;
+  }
+  .floating-badge.badge-bottom-right {
+    right: 4px;
+    bottom: -16px;
+  }
+}
+
+/* Interactive Service Finder Section */
+.service-finder-box {
+  background: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-subtle);
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
+}
+
+.finder-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.finder-tab-btn {
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-subtle);
+  background: var(--bg-main);
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.finder-tab-btn:hover {
+  background: var(--navy-soft);
+  border-color: var(--navy-blue);
+  color: var(--navy-blue);
+}
+
+.finder-tab-btn.active {
+  background: var(--primary-navy);
+  color: #FFFFFF;
+  border-color: var(--primary-navy);
+  box-shadow: var(--shadow-md);
+}
+
+.finder-tab-btn.active svg {
+  color: var(--accent-saffron);
+}
+
+.finder-result-card {
+  background: var(--navy-soft);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border: 1.5px solid rgba(19, 62, 135, 0.2);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .finder-result-card {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* 4-Step PSK Journey */
+.journey-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.journey-step-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.journey-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(19, 62, 135, 0.3);
+}
+
+.journey-step-number {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: rgba(11, 37, 69, 0.08);
+  font-family: var(--font-heading);
+}
+
+.journey-step-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--navy-soft);
+  color: var(--navy-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+/* Comparison Section (Solo vs With Consultancy) */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+@media (min-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.comparison-card {
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+}
+
+.comparison-card.alone {
+  background: #FFF1F2;
+  border: 1.5px solid #FECDD3;
+}
+
+.comparison-card.with-us {
+  background: #F0FDF4;
+  border: 1.5px solid #BBF7D0;
+  box-shadow: var(--shadow-md);
+}
+
+.comparison-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.comparison-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* FAQ Accordion */
+.faq-accordion-item {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.faq-accordion-item.open {
+  border-color: var(--navy-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-header-btn {
+  width: 100%;
+  padding: 18px 22px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: var(--primary-navy);
+  background: #FFFFFF;
+  transition: background 0.2s ease;
+}
+
+.faq-header-btn:hover {
+  background: var(--bg-main);
+}
+
+.faq-content-body {
+  padding: 0 22px 20px;
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* Call to Action Banner */
+.cta-banner {
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--navy-blue) 100%);
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 48px 36px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(234, 88, 12, 0.4);
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: rgba(234, 88, 12, 0.2);
+}
+
+@media (max-width: 640px) {
+  .hero-wrapper {
+    padding: 40px 0 60px;
+  }
+  .service-finder-box {
+    padding: 22px 16px;
+    margin-top: -24px;
+    border-radius: var(--radius-lg);
+  }
+  .finder-tabs {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .finder-tab-btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+  .finder-result-card {
+    padding: 18px 14px;
+  }
+  .passport-book {
+    padding: 20px 14px;
+  }
+  .passport-emblem-wrap {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 16px;
+  }
+  .passport-gold-title {
+    font-size: 1.15rem;
+  }
+  .cta-banner {
+    padding: 32px 18px;
+  }
+  .journey-timeline {
+    margin-top: 24px;
+  }
+}
